@@ -1,12 +1,74 @@
-# Getting Started with Create React App
+# Givebacks Skill Assessment Project
+
+To get a better understanding of how you code. We at Givebacks, ask that you complete this assessment to the best of your ability
+
+As a developer here, you'll be tasks with completed cards that have built out requirements. Not only do we ask that you delivery the best quality of code, we ask that we strive to deliver the best quality of product. With that in mind, we have built this project in a way that may not have all the information needed, but will leave choices up to you.
+
+## What this is
+
+This project is a website that displays and searches for Causes using the Givebacks Cause Search API
+
+## The Requirements
+
+- [ ] As a user when I navigate to the application, by default, I should be viewing a list of Causes rendered by the Givebacks Cause Search API
+- [ ] As a user, I should be able to search for a Cause by name, rendering the causes found from my search
+- [ ] As a user, I should be able to search for a Cause by city and state, rendering the causes found
+- [ ] As a user, I should be able to tell if there are more causes that are not being displayed based on my search and data from the API
+
+## Duration
+
+This project is meant to test your skill level. We have set a time limit of 4 hours, at the end of this duration please submit your work. This time limit helps us evaluate candidates fairly.
+
+## The Tech Specs
+
+You'll use our Givebacks Cause Search API in order to render Cause data.
+
+#### Base URL
+
+`https://api.givebacks.com/services/core/causes/search`
+
+#### Query Parameter Options:
+
+- Search by name: `search[name][value]=XYZ`
+- Search by city: `search[city][value]=Raleigh`
+- Search by state: `search[state][value]=Raleigh`
+- Search by AND: `join=AND` ie `join=AND&search[name][value]=XYZ&search[city][value]=Raleigh`
+
+#### React
+
+We have provided a **optional** react library via [create-react-app](https://create-react-app.dev/) that you are welcome to use. It also provides a HTTP client you can use to interact with our Cause Search API. Choosing or not choosing this library does **not** change your assessment results
+
+## The Delivery
+
+- A github repository with all of your work you are ready to submit
+- Instructions for how to start and navigate to your UI
+- A writeup of the challenges or decisions you had to make as you build out this project
+- Send an email to provided emails, sent with the instructions by the employee you met with the above information
+
+## How we assess
+
+We have our team leads review & assess your submission based on a 1-5 rating on the following
+
+- Based upon the completion of the requirements
+- Quaility of code
+- User Experience (UX)
+- Bonus
+  - These are different based on the team lead but they could be things like:
+    - Git history & cleanliness
+    - User feedback as they interact with the UI
+    - The choice/use of third party libraries
+
+---
+
+## Create React App README
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,57 +76,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+#### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

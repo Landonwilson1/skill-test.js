@@ -16,15 +16,16 @@ function useFetch(url) {
         var names = [];
         console.log(response.data.causes[0].name);
 
-      for (let i = 0; i < response.data.causes.length; i++) {
+        //loop that pulls all of the causes names
+        for (let i = 0; i < response.data.causes.length; i++) {
         names.push(response.data.causes[i].name);
         }
         console.log(names);
+
+        return names;
         //console.log(names.name);
       })
 
-      
-     
       //loop through to get name 
       .catch((err) => {
         setError(err);
@@ -52,7 +53,7 @@ function useFetch(url) {
       });
   };
 
-  return { data, loading, error, refetch };
+  return { data, loading, error, refetch};
 }
 
 export default useFetch;

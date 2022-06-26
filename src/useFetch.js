@@ -1,26 +1,58 @@
-import axios from "axios"
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-const useFetch = url => {
-  const [users, setUsers] = useState([])
-  const [error, setError] = useState("")
-  const [isLoading, setIsLoading] = useState(false)
+function useFetch(url) {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    setIsLoading(true)
+    setLoading(true);
     axios
       .get(url)
-      .then(response => {
-        setUsers(response.data)
-        setIsLoading(false)
-      })
-      .catch(error => {
-        setError("Sorry, something went wrong")
-        setIsLoading(false)
-      })
-  }, [url])
+      .then((response) => {
+        setData(response.data);
+        //console.log(response.data);
+        var names = [];
+        console.log(response.data.causes[0].name);
 
-  return { users, error, isLoading }
+      for (let i = 0; i < response.data.causes.length; i++) {
+        names.push(response.data.causes[i].name);
+        }
+        console.log(names);
+        //console.log(names.name);
+      })
+
+      
+     
+      //loop through to get name 
+      .catch((err) => {
+        setError(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+      
+  }, [url]);
+
+  
+
+  const refetch = () => {
+    setLoading(true);
+    axios
+      .get(url)
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((err) => {
+        setError(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
+  return { data, loading, error, refetch };
 }
 
-export default useFetch
+export default useFetch;

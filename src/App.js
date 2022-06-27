@@ -15,8 +15,11 @@ function App() {
     names.push(data.causes[i].name);
     }
 
+
   return (
+    //search bar
     <div className="App">
+      
       <h1>
         {names}
       </h1>

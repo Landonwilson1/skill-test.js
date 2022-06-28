@@ -8,7 +8,7 @@ const CausesGrid = ({ items, isLoading }) => {
   ) : (
     <section className='cards'>
       {items.causes.map((item) => (
-        <CausesItem key={item.char_id} item={item}></CausesItem>
+        <CausesItem key={item.name} item={item}></CausesItem>
       ))}
     </section>
   )

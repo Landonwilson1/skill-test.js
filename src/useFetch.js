@@ -22,7 +22,7 @@ function useFetch(url) {
         }
         console.log(names);
 
-        return names;
+      
         //console.log(names.name);
       })
 
@@ -35,8 +35,6 @@ function useFetch(url) {
       });
       
   }, [url]);
-
-  
 
   const refetch = () => {
     setLoading(true);

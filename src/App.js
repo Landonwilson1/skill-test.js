@@ -6,15 +6,19 @@ function App() {
     "https://api.givebacks.com/services/core/causes/search"
   );
 
+  
   if (loading) return <h1> LOADING...</h1>;
 
   if (error) console.log(error);
 
-  let names = []
-  for (let i = 0; i < data.causes.length; i++) {
-    names.push(data.causes[i].name);
-    }
+  
+ // let names = []
+ // for (let i = 0; i < data.causes.length; i++) {
+  //names.push(data.causes[i].name);
+ // }
 
+  console.log(data)
+ 
 
   return (
     //search bar
@@ -28,6 +32,12 @@ function App() {
       <button onClick={refetch}> Refetch</button>
     </div>
   );
+  
 }
 
+
+
+
 export default App;
+
+

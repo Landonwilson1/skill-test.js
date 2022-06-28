@@ -74,6 +74,11 @@ input[type='text'] {
   height: 300px;
   perspective: 1000px;
   background-color: #333;
+  transition: transform .2s;
+}
+
+.card:hover {
+  transform: scale(1.03);
 }
 
 .card h1 {

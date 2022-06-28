@@ -1,39 +1,42 @@
-import "./App.css";
-import useFetch from "./useFetch";
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+import Header from './components/ui/Header'
+import CausesGrid from './components/causes/CausesGrid'
+import Search from './components/ui/Search'
+import './App.css'
 
-function App() {
-  const { data, loading, error, refetch } = useFetch(
-    "https://api.givebacks.com/services/core/causes/search"
-  );
+const App = () => {
+  const [items, setItems] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+  const [query, setQuery] = useState('')
 
+  useEffect(() => {
+    const fetchItems = async () => {
+      setIsLoading(true)
+      const result = await axios(
+        `https://api.givebacks.com/services/core/causes/search?name=${query}`
+      )
+
+      console.log(result.data)
+
+      setItems(result.data)
+      setIsLoading(false)
+    }
+
+    fetchItems()
+  }, [query])
   
-  if (loading) return <h1> LOADING...</h1>;
-
-  if (error) console.log(error);
-
+  const queryFunction = (q) =>{
+    setQuery(q)
+  }
   
-
-  console.log(data)
- 
-
   return (
-    //search bar
-    <div className="App">
-      
-      <h1>
-        {names}
-      </h1>
-      
-
-      <button onClick={refetch}> Refetch</button>
+    <div className='container'>
+      <Header />
+      <Search getQuery={queryFunction} />
+      <CausesGrid isLoading={isLoading} items={items} />
     </div>
-  );
-  
+  )
 }
 
-
-
-
-export default App;
-
-
+export default App

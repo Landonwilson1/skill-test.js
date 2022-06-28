@@ -12,10 +12,6 @@ function App() {
   if (error) console.log(error);
 
   
- // let names = []
- // for (let i = 0; i < data.causes.length; i++) {
-  //names.push(data.causes[i].name);
- // }
 
   console.log(data)
  

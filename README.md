@@ -13,13 +13,13 @@
   - [License](#License)
 
   ## Installation 
-  Clone repo, ```npm i```, run locally with ```npm start ``` from root
+  Clone repo, ```npm i```, run locally with ```npm start``` from root
 
   ## Usage 
-  [Book Finder](https://booksearchlw.herokuapp.com/)
+  [
   
   ## Screenshot
-  ![Book Finder](booksearchlw.herokuapp.com_.png)
+  ![Screenshot](localhost_3000__.png)
 
   ## Questions 
   If you have any questions reach out to me at: </br>

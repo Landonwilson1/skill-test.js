@@ -28,7 +28,7 @@ const App = () => {
     }
 
     fetchItems()
-  }, [query])
+  }, [query])  //dependency so useEffect fires everytime value is changed
   
   const queryFunction = (q) =>{
     setQuery(q)
